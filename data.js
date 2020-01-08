@@ -30,6 +30,36 @@ var data = [{
 	"answer": "See if you can come up with a creative discount to offset the cost of breaking a contract early, or demonstrate ROI that will make up for the sunk cost."
 }, {
 	"objections": [
+		"I can't sell this internally.",
+		"I don't think I'll be able to persuade the CEO to purchase this."],
+	"answer": "Ask your prospect what objections they anticipate, and help them prepare the business case for adopting your product. Check with Marketing to see if there's any collateral you can leverage on your prospect's behalf."
+}, {
+	"objections": [
+		"I've never heard of your company.",
+		"If you guys are so amazing, why haven't I heard of you?"],
+	"answer": "Treat this objection as a request for information. Don't give an elevator pitch, but provide a very quick summary of your value proposition."
+}, {
+	"objections": [
+		"We're doing great in this area that you help with.",
+		"We actually don't really suffer from this problem to the extent that you've described."],
+	"answer": "If you hear this objection, do a little more qualification. What are your prospect's goals? How much progress has been made?."
+}, {
+	"objections": [
+		"There's too much going on right now.",
+		"I want to work with you on this, but I have a 100 other things on my plate."],
+	"answer": "Ask your prospect to define their competing priorities for you. If they can't, it's likely a brush-off and you should press them on precisely why they don't want to engage with you."
+}, {
+	"objections": [
+		"We're being downsized / bought out.",
+		"You know, this is an uncertain time for us, since we're being acquired."],
+	"answer": "Wrap the relationship professionally so when your prospect finds a new gig, they'll be more likely to restart the conversation from a new company."
+}, {
+	"objections": [
+		"I'm not authorized to sign off on this purchase.",
+		"I need to check with somebody else on the team, since I can't make the decision myself."],
+	"answer": "No problem. Ask your prospect who for the name of the right person to speak to, and then redirect your call to them."
+}, {
+	"objections": [
 		"We don't have any budget left this year.",
 		"I love your product, but when I presented it to the CEO, she said we don't have room in the budget at t."],
 	"answer": "Either help your prospect secure budget from executives to buy now, or arrange up a follow-up call for when they expect funding to return."	
