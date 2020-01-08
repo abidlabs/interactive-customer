@@ -34,13 +34,16 @@ a:hover {color: #336699; text-decoration: underline;}
 .tip strong {margin-right: 5px;}
 
 .controls {
-	width: 440px; height: 70px;
+	width: 540px; height: 290px;
 	margin: 50px auto; padding: 5px 15px;
 	
 	background: #f1f1f1;
 	border: 1px #ccc solid;
 	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
 	text-shadow: #fff 0 1px 0;
+}
+#objection-count, #time-length{
+	font-weight: bold;
 }
 .controls h1 {margin-bottom: 15px; font-size: 14px; font-weight: bold;}
 .controls .key {
@@ -53,12 +56,19 @@ a:hover {color: #336699; text-decoration: underline;}
 	border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;
 	text-shadow: #000 0 1px 0;
 }
-.controls .act {
+.controls .desc {
 	float: left;
-	margin: 3px 20px 0 0;
+	margin: 3px 20px 30px 0;
 	
 	color: #777;
-	font-size: 12px;
+	font-size: 14px;
+}
+.controls .act {
+	float: left;
+	margin: 0px 20px 0 0;
+	
+	color: #777;
+	font-size: 14px;
 }
 .controls .act:last-child {margin-right: 0;}
 

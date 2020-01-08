@@ -11,59 +11,13 @@
   gtag('config', 'UA-123499302-3');
 </script>
 
-<title>The Interactive Customer Game: Handling Objections</title>
+<title>The Simulated Customer Game: Handling Objections</title>
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
 <script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="functions.js"></script>
-<script type="text/javascript">
-var timer = 15;
-
-
-// Randomize objections
-data.sort(function() {return 0.5 - Math.random()})
-
-// End Questions
-data.push('done');
-
-
-$(document).ready(function(){
-	next_q();
-	timer_tick();
-	display_tip();
-});
-
-
-
-$(document).keydown(function(e) {
-	console.log(e)
-
-	switch (e.keyCode)
-	{
-		case 40:
-			// Next Objection - down (40)
-			next_q();
-			break;
-		
-		case 37:
-			// Restart Timer - left (37)
-			timer_restart();
-			break;
-		
-		case 39:
-			// See answer - right (39)
-			see_answer();
-			break;
-
-		case 110:
-			// Doesn't Do Anything, Move Along
-			break;
-			
-	}
-});
-</script>
 
 </head>
 <body>
@@ -95,12 +49,16 @@ $(document).keydown(function(e) {
 
 		<img src="crying.jpg" width="400px"></img><br>&nbsp;<br>
 
-	<strong>Suggested approach:</strong> <a href="https://www.carew.com/laer-bonding-process/" target="_blank">Listen, Acknowledge, Explore, and Respond. </a><span id="tip">&nbsp;</span>
+	<strong>Suggested approach:</strong> <span id="tip">&nbsp;</span>
 </div>
 
 
 <!-- Keyboard Control Reference -->
 <div class="controls">
+	<h1>How This Works</h1>
+	<div class="desc">Suppose you have an amazing product that you are trying to sell to a business that you know will benefit from your product. Even then, your buyer may present various "objections" to purchasing your product. <br>&nbsp;</br> As a seller, your job is to "handle the objection." There are several good strategies for handling objections, such as the "<a href="https://www.carew.com/laer-bonding-process/" target="_blank">Listen, Acknowledge, Explore, and Respond</a>" approach. After you have learned a strategy, use this website to verbally practice handling objections. It will randomly generate one of <span id="objection-count"></span> different objections, and give you <span id="time-length"></span> seconds to answer it.</div>
+
+
 	<h1>Key Controls</h1>
 	
 	<div class="key">left</div>
@@ -116,9 +74,64 @@ $(document).keydown(function(e) {
 
 <!-- Footer -->
 <div class="footer">
-	Assembled by
-	<a href="http://abidlabs.github.io/">Abubakar Abid</a>, CEO of <a href="http://gradio.app/">Gradio</a>, forked from the useful <a href="https://jamescun.github.io/iPG/">iPG</a>.
+	Created by
+	<a href="http://abidlabs.github.io/">Abubakar Abid</a>, CEO of <a href="http://gradio.app/">Gradio</a>, based on the useful <a href="https://jamescun.github.io/iPG/">iPG</a> by James Cunningham and Colin Hayhurst. <a href="https://github.com/abidlabs/simulated-customer"> Contribute and see sources on GitHub</a>.
 </div>
 
 </body>
+
+<script type="text/javascript">
+const TIMER_LENGTH = 20;
+var timer = TIMER_LENGTH;
+
+// Count objections
+var objection_count = 0
+data.forEach(function (item, index) {
+	console.log(item)
+  objection_count += item['objections'].length
+});
+
+data.sort(function() {return 0.5 - Math.random()}) // Randomize objections
+data.push('done'); // End objections
+
+// Initialize webpage
+$(document).ready(function(){
+	next_q();
+	timer_tick();
+	display_tip();
+});
+
+// Set up event handlers
+$(document).keydown(function(e) {
+	console.log(e)
+
+	switch (e.keyCode)
+	{
+		case 40:
+			// Next Objection - down (40)
+			next_q();
+			break;
+		
+		case 37:
+			// Restart Timer - left (37)
+			timer_restart();
+			break;
+		
+		case 39:
+			// See answer - right (39)
+			see_answer();
+			break;
+
+		case 110:
+			// Doesn't Do Anything, Move Along
+			break;
+			
+	}
+});
+
+// Fill in description
+$('#time-length').html(TIMER_LENGTH)
+$('#objection-count').html(objection_count)
+</script>
+
 </html>

@@ -74,9 +74,9 @@ function timer_restart()
 	$('#timer').removeClass('hide');
 	$('.tip').addClass('hide');
 	
-	timer = 15;
+	timer = TIMER_LENGTH;
 	
-	$('#timer').html('15 s');
+	$('#timer').html(TIMER_LENGTH + ' s');
 }
 
 
