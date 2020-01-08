@@ -1,7 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>iPG</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123499302-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123499302-3');
+</script>
+
+<title>Interactive Customer</title>
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -43,9 +53,10 @@ $(document).keypress(function(e) {
 			timer_restart();
 			break;
 		
+
+
 		case 110:
 			// Doesn't Do Anything, Move Along
-			$('body').append('<div class="egg"><iframe width="420" height="315" src="http://www.youtube.com/embed/QH2-TGUlwu4?autoplay=1" frameborder="0" allowfullscreen></iframe></div>');
 			break;
 			
 	}
@@ -57,10 +68,10 @@ $(document).keypress(function(e) {
 
 <!-- Message to be Displayed when out of questions -->
 <div id="end" class="hide">
-	<h1>You have reached the end of questions</h1>
-	<h2>Hopefully you will be a little more ready for your YC interview, good luck! :)</h2>
+	<h1>You have reached the end of objections</h1>
+	<h2>Hopefully you'll be ready to talk to your customer, good luck! :)</h2>
 	
-	<p>Why not check out <a href="http://goscale.com/">GoScale</a>, it&#39;s cloud computing that scales in milliseconds.</p>
+	<p>Why not check out <a href="http://gradio.app/">Gradio</a>, we build the best tools for machine learning.</p>
 </div>
 
 
@@ -103,9 +114,7 @@ $(document).keypress(function(e) {
 <!-- Footer -->
 <div class="footer">
 	Built by
-	<a href="http://jamescun.com/">James Cunningham</a> and
-	<a href="http://entrevate.com/">Colin Hayhurst</a> for 
-	<a href="http://stackblaze.com/">StackBlaze</a>&#39;s YC S12 Interview
+	<a href="http://abidlabs.github.io/">Abubakar Abid</a>, CEO of <a href="http://gradio.app/">Gradio</a>, forked from the useful <a href="https://jamescun.github.io/iPG/">iPG</a>.
 </div>
 
 </body>
