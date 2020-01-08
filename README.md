@@ -1,4 +1,4 @@
-Simulated Customer
+The Simulated Customer Game
 ===
 
 Simulated Customer pretends to be a reluctant customer that you are selling to, so that you 
