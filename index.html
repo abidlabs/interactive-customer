@@ -25,15 +25,15 @@
 <!-- Message to be Displayed when out of questions -->
 <div id="end" class="hide">
 	<h1>You have reached the end of objections</h1>
-	<h2>Hopefully you'll be ready to talk to your customer, good luck! :)</h2>
+	<h2>Hopefully, you'll be ready to talk to your customer, good luck! :)</h2>
 	
-	<p>Why not check out <a href="http://gradio.app/">Gradio</a>, we build the best tools for machine learning.</p>
+	<p>Why not check out <a href="http://gradio.app/">Gradio</a>, we build powerful tools for machine learning teams!</p>
 </div>
 
 
 <!-- Question Display --->
 <div id="question">
-	"<span id="question-text"></span>"
+	<span class="gold-text">Customer:</span> "<span id="question-text"></span>"
 	&nbsp;
 </div>
 
@@ -46,17 +46,18 @@
 
 <!-- Tips Display -->
 <div class="tip hide">
-
-		<img src="crying.jpg" width="400px"></img><br>&nbsp;<br>
-
-	<strong>Suggested approach:</strong> <span id="tip">&nbsp;</span>
+	<img src="crying.jpg" width="400px"></img><br>&nbsp;<br>
+	<span class="gold-text"><strong>Try this next time:</strong></span> <span id="tip">&nbsp;</span>
+	<br>&nbsp;</br>
 </div>
 
 
 <!-- Keyboard Control Reference -->
 <div class="controls">
-	<h1>How This Works</h1>
-	<div class="desc">Suppose you have an amazing product that you are trying to sell to a business that you know will benefit from your product. Even then, your buyer may present various "objections" to purchasing your product. <br>&nbsp;</br> As a seller, your job is to "handle the objection." There are several good strategies for handling objections, such as the "<a href="https://www.carew.com/laer-bonding-process/" target="_blank">Listen, Acknowledge, Explore, and Respond</a>" approach. After you have learned a strategy, use this website to verbally practice handling objections. It will randomly generate one of <span id="objection-count"></span> different objections, and give you <span id="time-length"></span> seconds to answer it.</div>
+	<div id="controls-about">
+	<h1>What is This Website For? <span class="hide-key">&times; hide</span></h1> 
+	<div class="desc">Suppose you have an amazing product that you are selling to a business that you know will benefit from your product. Even then, your buyer may be reluctant and present various objections to purchasing your product. <br>&nbsp;</br> As a seller, your job is to "handle the objection." There are several good strategies for handling objections, such as the "<a href="https://www.carew.com/laer-bonding-process/" target="_blank">Listen, Acknowledge, Explore, and Respond</a>" approach. After you have learned a general strategy, use this website to practice handling specific objections. The site will randomly generate one of <span id="objection-count"></span> different objections, and give you <span id="time-length"></span> seconds to answer it.</div>
+	</div>
 
 
 	<h1>Key Controls</h1>
@@ -67,7 +68,7 @@
 	<div class="key">right</div>
 	<div class="act">to see answer</div>
 	
-	<div class="key">down</div>
+	<div class="key">enter</div>
 	<div class="act">to next objection</div>
 </div>
 
@@ -87,7 +88,6 @@ var timer = TIMER_LENGTH;
 // Count objections
 var objection_count = 0
 data.forEach(function (item, index) {
-	console.log(item)
   objection_count += item['objections'].length
 });
 
@@ -101,14 +101,17 @@ $(document).ready(function(){
 	display_tip();
 });
 
+$('.hide-key').click(function() {
+	$('#controls-about').hide();
+	$('.controls').css('height', '80px')
+});
+
 // Set up event handlers
 $(document).keydown(function(e) {
-	console.log(e)
-
 	switch (e.keyCode)
 	{
-		case 40:
-			// Next Objection - down (40)
+		case 13:
+			// Next Objection - Enter (13)
 			next_q();
 			break;
 		

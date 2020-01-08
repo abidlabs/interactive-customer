@@ -12,7 +12,6 @@ function next_q()
 		if (sample != 'done')
 		{
 			objection_arr = sample['objections'] 
-			console.log(objection_arr)
 			$('#question-text').html(objection_arr[Math.floor(Math.random() * objection_arr.length)]);
 			timer_restart();
 			display_tip();

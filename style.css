@@ -17,6 +17,11 @@ a:hover {color: #336699; text-decoration: underline;}
 	text-align: center;
 	line-height: 84px;
 }
+#question #question-pref{
+	font-size: 16px !important;
+	text-align: top;
+	padding-bottom: 20px;
+}
 #timer {
 	width: 120px;
 	margin: 0 auto 50px auto; padding: 4px 0;
@@ -42,6 +47,9 @@ a:hover {color: #336699; text-decoration: underline;}
 	border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
 	text-shadow: #fff 0 1px 0;
 }
+.gold-text{
+	color:#da942b;
+}
 #objection-count, #time-length{
 	font-weight: bold;
 }
@@ -53,6 +61,17 @@ a:hover {color: #336699; text-decoration: underline;}
 	color: #fff;
 	background: #333;
 	font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace; font-weight: bold;
+	border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+	text-shadow: #000 0 1px 0;
+}
+.controls .hide-key {
+	float: right;
+	margin-right: 5px; padding: 3px 6px;
+	cursor: pointer;
+
+	color: #fff;
+	background: #948f86;
+	font: 12px;
 	border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;
 	text-shadow: #000 0 1px 0;
 }
