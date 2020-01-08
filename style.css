@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 body {
 	font: 14px 'Lato', sans-serif;
@@ -30,11 +30,11 @@ a:hover {color: #336699; text-decoration: underline;}
 .warning {background: #ffcc66;}
 .fail {background: #ff9999;}
 
-.tip {text-align: center;}
+.tip {text-align: center; font-size: 24px; max-width: 80%; margin: auto;}
 .tip strong {margin-right: 5px;}
 
 .controls {
-	width: 320px; height: 70px;
+	width: 440px; height: 70px;
 	margin: 50px auto; padding: 5px 15px;
 	
 	background: #f1f1f1;

@@ -1,17 +1,19 @@
 /* --- Question Functions ---
    -------------------------------------------------- */
 
+var sample;
 function next_q()
 {
 	if ( $('#end').hasClass('hide') == true )
 	{
 		
-		var question = q.shift();
+		sample = data.shift();
 		
-		if (question != 'done')
+		if (sample != 'done')
 		{
-			$('#question').html(question);
-			
+			objection_arr = sample['objections'] 
+			console.log(objection_arr)
+			$('#question-text').html(objection_arr[Math.floor(Math.random() * objection_arr.length)]);
 			timer_restart();
 			display_tip();
 		} else
@@ -21,6 +23,7 @@ function next_q()
 			$('.pg').addClass('hide');
 			
 			$('#end').removeClass('hide');
+			$('.tip').addClass('hide');
 		}
 	}
 }
@@ -36,8 +39,8 @@ function timer_tick()
 	$('#timer').removeClass('fail');
 	
 	timer = timer - 1;
-	
 	$('#timer').html(timer + ' s');
+	
 	
 	
 	if (timer < 10)
@@ -52,10 +55,15 @@ function timer_tick()
 	if (timer <= 0)
 	{
 		$('#timer').addClass('hide');
-		$('.pg').removeClass('hide');
+		$('.tip').removeClass('hide');
 	}
 	
 	 setTimeout('timer_tick();', 1000);
+}
+
+function see_answer(){
+	$('#timer').addClass('hide');
+	$('.tip').removeClass('hide');	
 }
 
 function timer_restart()
@@ -64,6 +72,7 @@ function timer_restart()
 	$('#timer').removeClass('fail');
 	$('.pg').addClass('hide');
 	$('#timer').removeClass('hide');
+	$('.tip').addClass('hide');
 	
 	timer = 15;
 	
@@ -77,9 +86,5 @@ function timer_restart()
 
 function display_tip()
 {
-	var tip = tips.shift();
-	
-	$('#tip').html(tip);
-	
-	tips.push(tip);
+	$('#tip').html(sample['answer']);
 }

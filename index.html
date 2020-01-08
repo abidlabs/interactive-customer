@@ -11,24 +11,22 @@
   gtag('config', 'UA-123499302-3');
 </script>
 
-<title>Interactive Customer</title>
+<title>The Interactive Customer Game: Handling Objections</title>
 <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
 <script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="functions.js"></script>
 <script type="text/javascript">
 var timer = 15;
 
 
-// Randomise Questions & Tips
-q.sort(function() {return 0.5 - Math.random()})
-tips.sort(function() {return 0.5 - Math.random()})
-
+// Randomize objections
+data.sort(function() {return 0.5 - Math.random()})
 
 // End Questions
-q.push('done');
+data.push('done');
 
 
 $(document).ready(function(){
@@ -39,21 +37,25 @@ $(document).ready(function(){
 
 
 
-$(document).keypress(function(e) {
+$(document).keydown(function(e) {
+	console.log(e)
 
-	switch (e.which)
+	switch (e.keyCode)
 	{
-		case 13:
-			// Next Question - Return (13)
+		case 40:
+			// Next Objection - down (40)
 			next_q();
 			break;
 		
-		case 32:
-			// Restart Timer - Space (32)
+		case 37:
+			// Restart Timer - left (37)
 			timer_restart();
 			break;
 		
-
+		case 39:
+			// See answer - right (39)
+			see_answer();
+			break;
 
 		case 110:
 			// Doesn't Do Anything, Move Along
@@ -77,6 +79,7 @@ $(document).keypress(function(e) {
 
 <!-- Question Display --->
 <div id="question">
+	"<span id="question-text"></span>"
 	&nbsp;
 </div>
 
@@ -87,15 +90,9 @@ $(document).keypress(function(e) {
 </div>
 
 
-<!-- Dissapointed Paul Graham -->
-<div class="pg hide">
-	<img src="pg.jpg" width="400" height="300" />
-</div>
-
-
 <!-- Tips Display -->
-<div class="tip">
-	<strong>ProTip:</strong> <span id="tip">&nbsp;</span>
+<div class="tip hide">
+	<strong>Suggested approach:</strong> <a href="https://www.carew.com/laer-bonding-process/" target="_blank">Listen, Acknowledge, Explore, and Respond. </a><span id="tip">&nbsp;</span>
 </div>
 
 
@@ -103,11 +100,14 @@ $(document).keypress(function(e) {
 <div class="controls">
 	<h1>Key Controls</h1>
 	
-	<div class="key key-space">space</div>
+	<div class="key">left</div>
 	<div class="act">to restart timer</div>
+
+	<div class="key">right</div>
+	<div class="act">to see answer</div>
 	
-	<div class="key key-return">return</div>
-	<div class="act">to next question</div>
+	<div class="key">down</div>
+	<div class="act">to next objection</div>
 </div>
 
 
