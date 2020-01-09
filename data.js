@@ -30,7 +30,7 @@ var data = [{
 	"answer": "See if you can come up with a creative discount to offset the cost of breaking a contract early, or demonstrate ROI that will make up for the sunk cost."
 }, {
 	"objections": [
-		"I can't sell this internally.",
+		"I like your product, but I can't sell this internally.",
 		"I don't think I'll be able to persuade the CEO to purchase this."],
 	"answer": "Ask your prospect what objections they anticipate, and help them prepare the business case for adopting your product. Check with Marketing to see if there's any collateral you can leverage on your prospect's behalf."
 }, {
@@ -58,6 +58,46 @@ var data = [{
 		"I'm not authorized to sign off on this purchase.",
 		"I need to check with somebody else on the team, since I can't make the decision myself."],
 	"answer": "No problem. Ask your prospect who for the name of the right person to speak to, and then redirect your call to them."
+}, {
+	"objections": [
+		"I don't see what your product could do for me.",
+		"I'm not sure what value your product will bring to us, actually."],
+	"answer": "A request for information packaged as an objection. Reconfirm the goals or challenges you've discussed and explain how your product can solve specific problems."
+}, {
+	"objections": [
+		"We don't have capacity to implement the product.",
+		"I wish we could use your product, but we just don't have the headcount to manage it."],
+	"answer": "This objection can be a deal-killing roadblock. But assess your prospect's current duties and day-to-day to see what job responsibilities could potentially be eliminated or made easier by your product."
+}, {
+	"objections": [
+		"We're happy the way things are.",
+		"Thanks for reaching out, but everything is going well out my company."],
+	"answer": "Maybe everything really is going swimmingly. But more likely, your prospect is having some sort of challenge (after all, who isn't?). ."
+}, {
+	"objections": [
+		"Your product doesn't have X feature, and we need it.",
+		"I like your product, but we can't buy it if it can't do X."],
+	"answer": "Try suggesting a supplementary product that can be used in conjunction with yours. But if that specific need is a must-have and your product can't solve it, your prospect might not be a good fit. Time to disqualify and move along to a better fit opportunity."
+}, {
+	"objections": [
+		"You don't understand my business.",
+		"I know you think you have a helpful product, but our industry doesn't quite work like that."],
+	"answer": "If you sell to a specific industry, chances are you do know a bit about your prospect's business. Let them know that you have experience working with similar companies, and have solved similar problems in the past."
+}, {
+	"objections": [
+		"You don't understand my challenges. I need help with Y, not X.",
+		"I don't think this directly helps us with our key challenge."],
+	"answer": "Restate your impression of their situation, then align with your prospect's take and move forward from there. A lot of misunderstandings and hard feelings can be resolved simply by rephrasing your prospect's words."
+}, {
+	"objections": [
+		"I don't understand your product.",
+		"Hmm, I'm very confused by your product."],
+	"answer": "Ask your prospect what aspects of your product they're unclear on, then try explaining it in a different way. If your prospect literally can't wrap their head around your product, that's a bad sign. Might want to disqualify."
+}, {
+	"objections": [
+		"This problem just isn't important now.",
+		"Hmm, can I get back to you, when this is a bigger problem for us?"],
+	"answer": "Sometimes, a simple 'Oh?'' will be enough for your prospect to start talking. Listen for real reasons the need has low priority versus platitudes. Keep in mind that excuses can be a sign that your prospect understands they have a problem and is trying to rationalize their inaction. Instill a sense of urgency."
 }, {
 	"objections": [
 		"We don't have any budget left this year.",
