@@ -35,6 +35,8 @@ a:hover {color: #336699; text-decoration: underline;}
 .warning {background: #ffcc66;}
 .fail {background: #ff9999;}
 
+.crying-img {text-align: center; font-size: 24px; max-width: 80%; margin: auto;}
+
 .tip {text-align: center; font-size: 24px; max-width: 80%; margin: auto;}
 .tip strong {margin-right: 5px;}
 

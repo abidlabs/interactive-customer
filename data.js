@@ -51,7 +51,7 @@ var data = [{
 }, {
 	"objections": [
 		"We're being downsized / bought out.",
-		"You know, this is an uncertain time for us, since we're being acquired."],
+		"You know, this is an uncertain time for me at this job, since we're being acquired."],
 	"answer": "Wrap the relationship professionally so when your prospect finds a new gig, they'll be more likely to restart the conversation from a new company."
 }, {
 	"objections": [

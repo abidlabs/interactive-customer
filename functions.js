@@ -23,6 +23,7 @@ function next_q()
 			
 			$('#end').removeClass('hide');
 			$('.tip').addClass('hide');
+			$('.crying-img').addClass('hide');
 		}
 	}
 }
@@ -55,12 +56,13 @@ function timer_tick()
 	{
 		$('#timer').addClass('hide');
 		$('.tip').removeClass('hide');
+		$('.crying-img').removeClass('hide');
 	}
 	
 	 setTimeout('timer_tick();', 1000);
 }
 
-function see_answer(){
+function see_answer(show_image){
 	$('#timer').addClass('hide');
 	$('.tip').removeClass('hide');	
 }
@@ -72,6 +74,7 @@ function timer_restart()
 	$('.pg').addClass('hide');
 	$('#timer').removeClass('hide');
 	$('.tip').addClass('hide');
+	$('.crying-img').addClass('hide');
 	
 	timer = TIMER_LENGTH;
 	
