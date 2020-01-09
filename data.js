@@ -72,7 +72,7 @@ var data = [{
 	"objections": [
 		"We're happy the way things are.",
 		"Thanks for reaching out, but everything is going well out my company."],
-	"answer": "Maybe everything really is going swimmingly. But more likely, your prospect is having some sort of challenge (after all, who isn't?). ."
+	"answer": "Maybe everything really is going swimmingly. But more likely, your prospect is having some sort of challenge (after all, who isn't?)."
 }, {
 	"objections": [
 		"Your product doesn't have X feature, and we need it.",
